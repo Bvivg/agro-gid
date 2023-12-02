@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "cboden/ratchet": "^0.4.4",
+        "workerman/workerman": "*"
+    }
+}
