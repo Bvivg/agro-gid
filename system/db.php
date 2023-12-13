@@ -1,5 +1,5 @@
 <?php
-$server = '192.168.7.214';
+$server = 'localhost';
 $db = 'AGRO GID';
 $name = 'root';
 $password = '';
@@ -9,3 +9,5 @@ try {
 } catch (PDOException $e) {
   echo "Подключение прерванно: " . $e->getMessage();
 }
+
+return $connect;

@@ -55,6 +55,10 @@ class ComposerStaticInit0c461f11987af4c3a46ed58a879a399d
         array (
             'Evenement\\' => 10,
         ),
+        'A' => 
+        array (
+            'Admin\\AgroGid\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -138,6 +142,10 @@ class ComposerStaticInit0c461f11987af4c3a46ed58a879a399d
         'Evenement\\' => 
         array (
             0 => __DIR__ . '/..' . '/evenement/evenement/src',
+        ),
+        'Admin\\AgroGid\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

@@ -1,7 +1,15 @@
 {
-    "require": {
-        "guzzlehttp/guzzle": "^7.8",
-        "cboden/ratchet": "^0.4.4",
-        "workerman/workerman": "*"
-    }
+    "name": "admin/agro-gid",
+    "autoload": {
+        "psr-4": {
+            "Admin\\AgroGid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bvivg",
+            "email": "tatytygulovbatyrbek19@gmail.com"
+        }
+    ],
+    "require": {}
 }

@@ -1,0 +1,33 @@
+2023-12-08 16:28:22 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
+          OR (sender_id = :receiverId A' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
+#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(79): Workerman\Worker::runAll()
+#7 {main}
+2023-12-08 16:30:07 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
+          OR (sender_id = :receiverId A' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
+#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(83): Workerman\Worker::runAll()
+#7 {main}
+2023-12-08 16:32:18 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
+      OR (sender_id = :receiverId AND r' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
+#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(79): Workerman\Worker::runAll()
+#7 {main}

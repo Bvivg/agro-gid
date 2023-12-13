@@ -26,4 +26,5 @@ return array(
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Evenement\\' => array($vendorDir . '/evenement/evenement/src'),
+    'Admin\\AgroGid\\' => array($baseDir . '/src'),
 );
