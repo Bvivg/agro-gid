@@ -11,5 +11,8 @@
             "email": "tatytygulovbatyrbek19@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "workerman/workerman": "^4.1",
+        "react/promise": "^3.1"
+    }
 }

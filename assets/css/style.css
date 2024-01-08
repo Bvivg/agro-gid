@@ -837,6 +837,7 @@ input[type=range]::-webkit-slider-thumb {
   color: #fff;
   border-radius: 15px 15px;
   max-width: 768px;
+  
   width: 100%;
 }
 .message-form-block {

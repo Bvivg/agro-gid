@@ -6,14 +6,7 @@ include "sidebar.php";
 ?>
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
-<script>
-  var hamburger = document.querySelector(".hamburger");
-  var nav = document.querySelector(".nav");
-  hamburger.addEventListener("click", function() {
-    hamburger.classList.toggle("is-active");
-    nav.classList.toggle("is-active");
-  });
-</script>
+<script src="./assets/js/chat.js"></script>
 </body>
 
 </html>

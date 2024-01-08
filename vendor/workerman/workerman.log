@@ -1,33 +1,63 @@
-2023-12-08 16:28:22 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
-          OR (sender_id = :receiverId A' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+2024-01-01 14:16:58 pid:1 ArgumentCountError: Too few arguments to function {closure}(), 0 passed in D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php on line 238 and exactly 1 expected in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:30
 Stack trace:
-#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
-#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
-#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
+#0 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
+#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#5 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(98): Workerman\Worker::runAll()
+#6 {main}
+2024-01-01 15:32:50 pid:1 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_text' cannot be null in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:105
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(105): PDOStatement->execute()
+#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Connection\TcpConnection.php(646): {closure}()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead()
 #3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
 #4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
 #5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
-#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(79): Workerman\Worker::runAll()
+#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(154): Workerman\Worker::runAll()
 #7 {main}
-2023-12-08 16:30:07 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
-          OR (sender_id = :receiverId A' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+2024-01-01 16:10:16 pid:1 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'sender_id' cannot be null in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:58
 Stack trace:
-#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
-#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
-#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
-#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
-#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
-#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
-#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(83): Workerman\Worker::runAll()
-#7 {main}
-2023-12-08 16:32:18 pid:1 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':userId AND receiver_id = :receiverId) 
-      OR (sender_id = :receiverId AND r' at line 1 in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:15
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(58): PDOStatement->execute()
+#1 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(44): sendMessage()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Connection\TcpConnection.php(646): {closure}()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#6 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#7 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(109): Workerman\Worker::runAll()
+#8 {main}
+2024-01-02 16:23:54 pid:1 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_text' cannot be null in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:17
 Stack trace:
-#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(15): PDO->query()
-#1 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(238): {closure}()
-#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(299): Workerman\Events\Select->tick()
-#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
-#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
-#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
-#6 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(79): Workerman\Worker::runAll()
-#7 {main}
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(17): PDOStatement->execute()
+#1 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(97): sendMessage()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Connection\TcpConnection.php(646): {closure}()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#6 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#7 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(123): Workerman\Worker::runAll()
+#8 {main}
+2024-01-02 16:26:20 pid:1 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_text' cannot be null in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:17
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(17): PDOStatement->execute()
+#1 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(97): sendMessage()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Connection\TcpConnection.php(646): {closure}()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#6 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#7 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(123): Workerman\Worker::runAll()
+#8 {main}
+2024-01-02 16:26:54 pid:1 PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_text' cannot be null in D:\OSPanel\domains\agro-gid\pages\chat.socket.php:17
+Stack trace:
+#0 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(17): PDOStatement->execute()
+#1 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(98): sendMessage()
+#2 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Connection\TcpConnection.php(646): {closure}()
+#3 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Events\Select.php(311): Workerman\Connection\TcpConnection->baseRead()
+#4 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1485): Workerman\Events\Select->loop()
+#5 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#6 D:\OSPanel\domains\agro-gid\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#7 D:\OSPanel\domains\agro-gid\pages\chat.socket.php(124): Workerman\Worker::runAll()
+#8 {main}

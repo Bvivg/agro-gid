@@ -22,8 +22,8 @@ include "incs/navbar.php";
 <div class="chatsidebar">
 
   <?php foreach ($users as $user) : ?>
+    <a href="chat/@<?php echo urlencode(str_replace(' ', '_', $user['username'])); ?>" class="chat-user">
 
-    <a href="chat?id=<?php echo $user['user_id']; ?>" class="chat-user">
       <?php
       $avatar = $user['avatar_path'];
       if ($avatar && file_exists($avatar)) : ?>
